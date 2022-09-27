@@ -2,7 +2,7 @@
 :root {
   --foregrand-dark: #d7d7d7;
   --foregrand-light: #ffffff;
-  --background-dark: #ffc9d7;
+  --background-dark: #ffe1e9;
   --backgrand-light: #fdc9d592;
 }
 
@@ -31,6 +31,7 @@ body {
   font-family: "Caveat", cursive;
 }
 body .bodyHeader {
+  z-index: 2;
   background-color: var(--background-dark);
   display: flex;
   justify-content: space-between;
@@ -45,7 +46,7 @@ body .bodyHeader {
 }
 body .bodyHeader h1 {
   /* Jeśli podajemy dwie wartości to są góra dół, jeżeli 4 to zgodnie ze wskazókami zegara */
-  margin: 10px;
+  margin-left: 2rem;
   font-size: clamp(1.3rem, 2.5vw, 2rem);
 }
 body nav #toggler {
@@ -94,7 +95,7 @@ body ul {
   flex-direction: column;
   background-color: var(--foregrand-dark);
   list-style-type: none;
-  margin: 0;
+  margin-right: 2rem;
   padding: 0.5rem;
   display: flex;
   right: -100%;
@@ -120,7 +121,7 @@ body ul li {
 .wrapper {
   display: flex;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
   padding-top: 6rem;
 }
@@ -143,6 +144,10 @@ body ul li {
 .wrapper form input, .wrapper form textarea {
   padding: 5px;
 }
+.wrapper .img img {
+  border-radius: 20px;
+  box-shadow: 0px 0px 41px -8px rgb(89, 89, 89);
+}
 
 .projects {
   border: 2px dashed red;
@@ -155,16 +160,13 @@ body ul li {
 }
 .projects .projectsWrapper .project {
   cursor: pointer;
-  border: 5px dashed green;
   position: relative;
   aspect-ratio: 1/1;
   width: 30%;
-  border-radius: 0 0 1.4rem 1.4rem;
   margin: 0.5rem;
 }
 .projects .projectsWrapper header {
-  border: 5px dashed #fff;
-  background-color: pink;
+  background-color: var(--background-dark);
   z-index: 1;
   position: relative;
 }
@@ -176,12 +178,12 @@ body ul li {
   display: none;
 }
 .projects .projectsWrapper img {
-  border: 5px dashed #000;
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
+  border-radius: 0 0 1.4rem 1.4rem;
 }
 
 .content {
@@ -211,12 +213,6 @@ body ul li {
 .content p {
   margin: 0rem;
   padding: 0.5rem;
-}
-.content img {
-  max-width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 /* Ustawianie elementow, żeby się nei rozjeżdżały */
