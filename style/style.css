@@ -53,24 +53,7 @@ body .bodyHeader h1 {
   margin-left: 2rem;
   font-size: clamp(1.3rem, 2.5vw, 2rem);
 }
-body nav #toggler {
-  display: none;
-}
-body nav #toggler:checked ~ ul {
-  right: 0;
-}
-body nav #toggler:checked ~ label div:nth-child(1) {
-  transform: rotate(45deg);
-  top: calc(50% - 2px);
-}
-body nav #toggler:checked ~ label div:nth-child(2) {
-  opacity: 0;
-}
-body nav #toggler:checked ~ label div:nth-child(3) {
-  transform: rotate(-45deg);
-  top: calc(50% - 2px);
-}
-body label {
+body .bodyHeader label {
   width: 2rem;
   height: 2rem;
   position: absolute;
@@ -78,23 +61,23 @@ body label {
   right: 0;
   margin: 0.15rem;
 }
-body label div {
+body .bodyHeader label div {
   height: 2px;
   width: 80%;
   background-color: black;
   position: absolute;
   transition: 0.3s;
 }
-body label div:nth-child(1) {
+body .bodyHeader label div:nth-child(1) {
   top: calc(20% - 1px);
 }
-body label div:nth-child(2) {
+body .bodyHeader label div:nth-child(2) {
   top: calc(50% - 1px);
 }
-body label div:nth-child(3) {
+body .bodyHeader label div:nth-child(3) {
   top: calc(80% - 1px);
 }
-body ul {
+body .bodyHeader ul {
   position: fixed;
   flex-direction: column;
   background-color: var(--foregrand-dark);
@@ -109,10 +92,31 @@ body ul {
   border-radius: 2rem 0rem 0rem 0rem;
   box-shadow: 0px 0px 41px -8px rgb(89, 89, 89);
 }
-body ul li {
+body .bodyHeader ul li {
   top: 0;
   left: 0;
   margin: 0.3rem;
+}
+body .bodyHeader nav #toggler {
+  display: none;
+}
+body .bodyHeader nav #toggler:checked ~ ul {
+  right: 0;
+}
+body .bodyHeader nav #toggler:checked ~ label div:nth-child(1) {
+  transform: rotate(45deg);
+  top: calc(50% - 2px);
+}
+body .bodyHeader nav #toggler:checked ~ label div:nth-child(2) {
+  opacity: 0;
+}
+body .bodyHeader nav #toggler:checked ~ label div:nth-child(3) {
+  transform: rotate(-45deg);
+  top: calc(50% - 2px);
+}
+
+#about {
+  margin-top: 6rem;
 }
 
 .wrapper {
@@ -134,6 +138,11 @@ body ul li {
   margin-bottom: 2rem;
   line-height: 1.2rem;
 }
+.wrapper .img img {
+  margin-top: 1rem;
+  border-radius: 20px;
+  box-shadow: 0px 0px 41px -8px rgb(89, 89, 89);
+}
 .wrapper form {
   display: flex;
   flex-direction: column;
@@ -145,48 +154,6 @@ body ul li {
 }
 .wrapper form input, .wrapper form textarea {
   padding: 5px;
-}
-.wrapper .img img {
-  margin-top: 6rem;
-  border-radius: 20px;
-  box-shadow: 0px 0px 41px -8px rgb(89, 89, 89);
-}
-
-.projects {
-  border: 2px dashed red;
-}
-.projects .projectsWrapper {
-  border: 2px dashed blue;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.projects .projectsWrapper .project {
-  cursor: pointer;
-  position: relative;
-  aspect-ratio: 1/1;
-  width: 30%;
-  margin: 0.5rem;
-}
-.projects .projectsWrapper header {
-  background-color: var(--background-dark);
-  z-index: 1;
-  position: relative;
-}
-.projects .projectsWrapper header h3 {
-  margin: 0;
-}
-.projects .projectsWrapper header p {
-  opacity: 0;
-  display: none;
-}
-.projects .projectsWrapper img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 0 0 1.4rem 1.4rem;
 }
 
 .content {
@@ -217,22 +184,79 @@ body ul li {
   margin: 0rem;
   padding: 0.5rem;
 }
-.content .display {
-  border: 5px dashed green;
+
+.projects .projectsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-.content .display ul {
+.projects .projectsWrapper .project {
+  cursor: pointer;
+  position: relative;
+  aspect-ratio: 1/1;
+  width: 28%;
+  max-width: 7rem;
+  border-radius: 0 0 1.4rem 1.4rem;
+  margin: 0.25rem;
+}
+.projects .projectsWrapper .project header {
+  background-color: rgb(255, 255, 255);
+  z-index: 1;
+  position: relative;
+}
+.projects .projectsWrapper .project header h3 {
+  margin: 0;
+}
+.projects .projectsWrapper .project header p {
+  opacity: 0;
+  display: none;
+}
+.projects .projectsWrapper .project img {
+  border-radius: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.projects .display {
+  background-color: rgba(246, 245, 244, 0.3058823529);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.projects .display ul {
   margin: 0;
   padding: 0;
   display: flex;
-  border: 4px dashed darkcyan;
   justify-content: space-between;
 }
-.content .display ul li {
+.projects .display ul li {
   list-style-type: none;
-  border: 2px dashed blue;
+}
+.projects .display article {
+  position: relative;
+  display: inline-block;
+}
+.projects .display article .displayContent {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+  text-align: right;
+}
+.projects .display article .displayContent h3, .projects .display article .displayContent p {
+  margin: 0;
+  padding: 0.5rem 1.5rem;
+  background-color: rgba(240, 248, 255, 0.735);
+}
+.projects .display article img {
+  max-height: 40vh;
 }
 
-/* Ustawianie elementow, żeby się nei rozjeżdżały */
 footer {
   margin-top: 3rem;
   background-color: black;
