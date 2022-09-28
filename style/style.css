@@ -59,7 +59,7 @@ body .bodyHeader label {
   position: absolute;
   top: 0;
   right: 0;
-  margin: 0.15rem;
+  margin: 0.5rem;
 }
 body .bodyHeader label div {
   height: 2px;
@@ -82,8 +82,8 @@ body .bodyHeader ul {
   flex-direction: column;
   background-color: var(--foregrand-dark);
   list-style-type: none;
-  margin-right: 2rem;
   padding: 0.5rem;
+  margin-right: 2rem;
   display: flex;
   right: -100%;
   top: 3.5rem;
@@ -130,7 +130,7 @@ body .bodyHeader nav #toggler:checked ~ label div:nth-child(3) {
 }
 .wrapper header h2 {
   margin: 0;
-  padding: 5rem 1rem 1rem 1rem;
+  padding: 1rem;
   text-align: center;
 }
 .wrapper .content p {
@@ -224,6 +224,7 @@ body .bodyHeader nav #toggler:checked ~ label div:nth-child(3) {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 2rem;
 }
 .projects .display ul {
   margin: 0;
@@ -283,6 +284,7 @@ footer p {
     flex-direction: row;
     position: static;
     border-radius: 2rem 2rem 2rem 2rem;
+    margin-right: 0;
   }
   body .bodyHeader nav label {
     display: none;
