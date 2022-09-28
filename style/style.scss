@@ -3,6 +3,7 @@
     --foregrand-light: #ffffff;
     --background-dark: #ffe1e9;
     --backgrand-light: #fdc9d592;
+    --default-box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 *{
     box-sizing: border-box;
@@ -12,6 +13,7 @@
         color: inherit;
         display: flex;
         align-items: center;
+        &:hover{color:inherit !important;}
     }
     .material-symbols-outlined{
         margin: .5rem;
@@ -78,7 +80,7 @@ body{
         position: absolute;
         top: 0;
         right: 0;
-        margin: 1.5rem;
+        margin: .15rem;
         div{
             height: 2px;
             width: 80%;
@@ -119,25 +121,29 @@ body{
         }
     }
 }
-.projectArt{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    padding-top: 6rem ;
-}  
-   .wrapper{
+
+
+.wrapper{
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-evenly;
-    padding-top: 6rem ;
+    padding: 2rem ;
     header {
         width: 100%;
         h2{
             margin: 0;
-            top: 3rem;
+            padding: 5rem 1rem 1rem 1rem;
+            text-align: center;
         }
     }
+    .content{
+        p{
+            margin: 0;
+            margin-bottom: 2rem;
+            line-height: 1.2rem;
+        }
+    }
+
 
     form{
         display: flex;
@@ -155,6 +161,7 @@ body{
     }
     .img{
         img{
+            margin-top: 5rem;
             border-radius: 20px;
             -webkit-box-shadow: 0px 0px 41px -8px rgba(89, 89, 89, 1);
             -moz-box-shadow: 0px 0px 41px -8px rgba(89, 89, 89, 1);
@@ -239,6 +246,22 @@ body{
         margin: 0rem;
         padding: .5rem;
     }
+
+    .display{
+        border:5px dashed green;
+        ul{
+          margin:0;
+          padding:0;
+          display:flex;
+          border:4px dashed darkcyan;
+          justify-content: space-between;
+          li{
+            list-style-type: none;
+            border:2px dashed blue;
+          }
+        }
+      }
+
 }
 
     
@@ -280,13 +303,14 @@ footer{
         .wrapper{
             min-height:70vh;
             flex-direction: row;
+          
             &:nth-child(odd){
               flex-direction: row-reverse;
             }
             > * { 
-              flex:1;
-              text-align: center;
-              padding:3rem;
+                flex:1;
+                text-align: center;
+                padding:3rem;
             }
         }
     }
