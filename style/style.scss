@@ -24,9 +24,12 @@ html{
 }
 body{
     background-color: var(--foregrand-light);
+    background-image: url(https://i.pinimg.com/236x/f4/87/77/f48777ce52d44a42cb0d7427cf6372a9--walls.jpg); background-attachment: fixed ; 
+    background-size: cover ;
     margin: 0px;
     min-height: 1000px;
     font-family: 'Caveat', cursive;
+    
         .bodyHeader{
         z-index: 2;
         display: flex;
@@ -55,7 +58,7 @@ body{
             position: absolute;
             top: 0;
             right: 0;
-            margin: .5rem;
+            margin: 1rem;
             div{
                 
                 height: 2px;
@@ -223,8 +226,8 @@ body{
       display:flex;
       flex-wrap: wrap;
       justify-content: center;
-      margin: 2rem 4rem 0rem 4rem;
-
+      margin: 3rem 3rem 0rem 3rem;
+        
       .project{
         cursor: pointer;
         position:relative;
@@ -263,6 +266,7 @@ body{
       display:flex;
       flex-direction: column;
       align-items: center;
+     
             
       ul{
         margin:0;
@@ -277,6 +281,9 @@ body{
       article{
         position: relative;
         display:inline-block;
+        
+        
+        
 
         .displayContent{
           position:absolute;
@@ -295,7 +302,7 @@ body{
           }
         }
         img{
-          max-height:40vh;
+          max-height:25vh;
         }
       }
     }
@@ -307,20 +314,25 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding:1rem;
+    height: 6rem;
     background-color: var(--background-dark);
     background-image:  url(https://res.allmacwallpaper.com/get/Retina-MacBook-Air-13-inch-wallpapers/dark-starry-sky-stars-4k-2560x1600/22301-11.jpg);
     background-size: cover;
     background-position: left top;
+     
 
     ol{
         list-style: none;
-        margin: 0;
-        padding: 1rem;
-        width: 100%;
+        width: 50%;
+        a{
+            
+            justify-content: start;
+            align-items: start;
+            
+        }
     }
     p {
-    margin:0;
+    margin:1rem;
     }
 }
 /* warunek wyłapujący wyświetlanie na komputerze */
