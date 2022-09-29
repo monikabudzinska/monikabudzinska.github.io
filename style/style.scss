@@ -1,7 +1,7 @@
 :root{
     --foregrand-dark: #d7d7d7;
     --foregrand-light: #eac9c9;
-    --background-dark: #ffe1e9;
+    --background-dark: #ffe1e9c8;
     --backgrand-light: #fdc9d592;
     --default-box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
@@ -31,21 +31,23 @@ body{
     font-family: 'Caveat', cursive;
     
         .bodyHeader{
-        z-index: 2;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: fixed; 
-        width: 100%;
-        padding: .1rem;
-        top: 0;
-        -webkit-box-shadow: 0px 0px 41px -8px rgba(89, 89, 89, 1);
+            z-index: 2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed; 
+            width: 100%;
+            padding: .1rem;
+            top: 0;
+            border-radius: 0 0 1rem 1rem;
+            -webkit-box-shadow: 0px 0px 41px -8px rgba(89, 89, 89, 1);
         -moz-box-shadow: 0px 0px 41px -8px rgba(89, 89, 89, 1);
         box-shadow: 0px 0px 41px -8px rgba(89, 89, 89, 1);
         background-color: var(--background-dark);
         background-image:  url(https://fotoomnia.com/zdjecia/thumb/a5519fd94e08a84b4b6fa0ebb43a9b60.jpg);
         background-size: cover;
         background-position: left top;
+        
                   
         h1{
             /* Jeśli podajemy dwie wartości to są góra dół, jeżeli 4 to zgodnie ze wskazókami zegara */
@@ -95,6 +97,7 @@ body{
             background-image:  url(https://fotoomnia.com/zdjecia/thumb/a5519fd94e08a84b4b6fa0ebb43a9b60.jpg);
             background-size: cover;
             background-position: left top;
+            
             li{
                 top: 0;
                 left: 0;
@@ -170,6 +173,7 @@ body{
         background-position: left top;
         input, textarea{
             padding: 5px;
+            background-color: #ffffffbc;
         }
     }
 }
@@ -199,7 +203,7 @@ body{
                 padding: .3rem;
             }
             th{
-                background-color: white;
+                background-color: rgba(255, 255, 255, 0.767);
                 padding: .5rem;
             }
         }
@@ -238,9 +242,10 @@ body{
         margin:.25rem;
         margin-bottom: 2rem;
         header{
-          background-color: rgb(255, 255, 255);
+          background-color: rgba(255, 196, 224, 0.467);;
           z-index: 1;
           position: relative;
+          border-radius: 2rem;
           h3{
             margin:0;
           }
@@ -262,10 +267,11 @@ body{
     }
 
     .display{
-      background-color: #f6f5f44e;
+      background-color: rgba(255, 196, 224, 0.467);
       display:flex;
       flex-direction: column;
       align-items: center;
+      border-radius: 2rem;
      
             
       ul{
@@ -298,7 +304,8 @@ body{
           h3, p{
             margin:0;
             padding:.5rem 1.5rem;
-            background-color: rgba(240, 248, 255, 0.735);
+            background-color: rgba(255, 196, 224, 0.548);
+            border-radius: 4rem;
           }
         }
         img{
@@ -344,6 +351,7 @@ body{
             position: static;
             border-radius: 2rem 2rem 2rem 2rem;
             margin-right: 2rem;
+            background: transparent;
           }
           label{
             display:none;
