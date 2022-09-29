@@ -231,7 +231,7 @@ body{
       flex-wrap: wrap;
       justify-content: center;
       margin: 3rem 3rem 0rem 3rem;
-        
+      
       .project{
         cursor: pointer;
         position:relative;
@@ -241,18 +241,24 @@ body{
         border-radius:0 0 1.4rem 1.4rem;
         margin:.25rem;
         margin-bottom: 2rem;
+        
         header{
           background-color: rgba(255, 196, 224, 0.467);;
           z-index: 1;
           position: relative;
           border-radius: 2rem;
+          display: flex;
+          margin-top: -.75rem;
+          
           h3{
-            margin:0;
+            margin: 0;
             text-align: center;
           }
           p{
             opacity:0;
             display:none;
+            
+            
           }
         }
         img{
@@ -262,6 +268,7 @@ body{
           top:0;
           width:100%;
           height:100%;
+          
 
         }
       }
@@ -274,7 +281,10 @@ body{
       align-items: center;
       border-radius: 2rem;
      
-            
+      a{
+        color: red;
+        font-size: large;
+      }    
       ul{
         margin:0;
         padding:0;
@@ -301,7 +311,7 @@ body{
           justify-content: end;
           align-items: end;
           text-align: right;
-          
+         
           h3, p{
             margin:0;
             padding:.5rem 1.5rem;
