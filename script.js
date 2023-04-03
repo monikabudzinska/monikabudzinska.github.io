@@ -1,5 +1,4 @@
-document
-.querySelectorAll(".project")
+document.querySelectorAll(".project")
 .forEach( project => {
   project.onclick = () => {
     document.querySelector('.display h3').innerText = project.querySelector('h3').innerText
